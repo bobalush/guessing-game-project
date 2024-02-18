@@ -19,7 +19,7 @@ function askGuess() {
 
 
 
-let secretNumber = 5;
+let secretNumber = randomInRange(0, 100);
 
 function checkGuess(num) {
     if (num > secretNumber ) {
@@ -36,7 +36,14 @@ function checkGuess(num) {
     }
 }
 
+function randomInRange(num1, num2) {
+    return Math.floor(Math.random()*(num2 - num1 + 1) + num1);
+}
 /* checkGuess(10);
 checkGuess(3);
 checkGuess(5); */
 askGuess();
+
+/* console.log(randomInRange(15, 20)); // 16
+console.log(randomInRange(15, 20)); // 17
+console.log(randomInRange(15, 20)); // 20 */
